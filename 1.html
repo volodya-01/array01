@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+   function randomSort(a) {
+        var arr = a,
+            random = [],
+            len = arr.length;
+        for (var i = 0; i < len; i++) {
+            var index = Math.floor(Math.random() * (len - i));
+            random.push(a[index]);
+            arr.splice(index, 1);
+        }
+        return random;
+    }
+
+    var a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    console.log(randomSort(a));
+   </script> 
+</body>
+</html>
